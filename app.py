@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
 import os
-from geoutilities import *
+
+from geoutilities import connection_gmap, address_coordinates
+from geoutilities import coordinates_neighborhood, neighboring_neighborhood
 
 load_dotenv()
 
