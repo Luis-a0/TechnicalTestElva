@@ -1,12 +1,16 @@
 import googlemaps
 
 def connection_gmap(key):
-    pass
+    return googlemaps.Client(key=key)
 
 def address_coordinates(address, gmaps):
-    pass
+    geocode_result = gmaps.geocode(address)
+    lat = geocode_result[0]['geometry']['location']['lat']
+    lng = geocode_result[0]['geometry']['location']['lng']
 
-def coordinates_neighborhood(coordinates):
+    return (lat, lng)
+
+def coordinates_neighborhood(lat, lng):
     pass
 
 def neighboring_neighborhood(neighboring, neighborhood='', move=100):
